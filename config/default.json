@@ -16,6 +16,14 @@
     },
     "token": null
   },
+  "stash": {
+    "host": "stash-example.com",
+    "protocol": "https",
+    "user": {
+      "name": null,
+      "password": null
+    }
+  },
   "npm": {
     "hostname": "https://www.npmjs.com",
     "options": {

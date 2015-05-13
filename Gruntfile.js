@@ -31,7 +31,8 @@ module.exports = function(grunt) {
             headHtml: "",
             hostname: "<%= conf.site.hostname %>",
             npmsite: "<%= conf.npm.hostname %>",
-            githubsite: "<%= conf.github.protocol %>://<%= conf.github.host %>"
+            githubsite: "<%= conf.github.protocol %>://<%= conf.github.host %>",
+            stashsite: "<%= conf.stash.protocol %>://<%= conf.stash.host %>"
           }
         },
         files: [
