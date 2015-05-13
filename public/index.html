@@ -18,7 +18,7 @@
     {{#if recentlyRetrievedManifests.length}}
     <ul id="examples">
       {{#with recentlyRetrievedManifests.[0]}}
-      <li>{{user}} - <a href="/{{user}}/{{repo}}">{{repo}}<img src="/{{user}}/{{repo}}.svg" alt="{{repo}} Dependency badge"></a></li>
+      <li>{{user}} - <a href="/{{user}}/{{repo}}"><strong>{{repo}}</strong><img src="/{{user}}/{{repo}}.svg" alt="{{repo}} Dependency badge"></a></li>
       {{/with}}
     </ul>
     {{/if}}
