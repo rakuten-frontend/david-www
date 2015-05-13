@@ -1,9 +1,6 @@
 /* jshint browser:true, jquery:true */
 
 var d3 = require("d3")
-var Handlebars = require("handlebars")
-var moment = require("moment")
-var fs = require("fs")
 var david = require("./david")
 
 require("./vendor/jquery.feed")
@@ -37,18 +34,4 @@ $("#home-page").each(function () {
     badge.show()
   })
 
-  /* RSS feed */
-  $.getFeed({
-    url: "/news/rss.xml",
-    success: function (feed) {
-      var entry = feed.items[0]
-
-      entry.shortDesc = $("<div/>").html(entry.description).text().substr(0, 200)
-      entry.datetime = moment(entry.updated).format()
-      entry.formattedDate = moment(entry.updated).format("MMMM Do YYYY, HH:mm")
-
-      var tpl = fs.readFileSync(__dirname + "/../../dist/inc/news.html", {encoding: "utf8"})
-      $("#stats").append(Handlebars.compile(tpl)(entry))
-    }
-  })
 })
